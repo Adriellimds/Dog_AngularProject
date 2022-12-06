@@ -9,10 +9,11 @@
   flex-direction: row;
   margin-bottom: 1rem;
   justify-content: space-between;
-  width: 30rem;
+  width: 28rem;
   align-items: baseline;
 }
 h1 {
+  font-size: 1.5rem;
   color: #6c63ff;
 }
 img {
