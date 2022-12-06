@@ -1,7 +1,6 @@
 import { DogServiceService } from './../dog-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Doginterface } from '../Dog-interface'; //importa a interface
-import { observable } from 'rxjs';
 
 @Component({
   selector: 'app-dog',
@@ -10,11 +9,11 @@ import { observable } from 'rxjs';
 })
 export class DogComponent implements OnInit {
 
-  dog ?: Doginterface; //Trazendo a interface para o component. 1 elemento.
+  dog?: Doginterface; //Trazendo a interface para o component. 1 elemento.
 
   getDog(): void {
     this.DogServiceService.ObserDog()
-    .subscribe(inter => this.dog = inter)       //Referencia do serviço criado
+  .subscribe(inter => this.dog = inter)       //Referencia do serviço criado
   }
 
   constructor(private DogServiceService: DogServiceService ) { }
@@ -22,5 +21,4 @@ export class DogComponent implements OnInit {
   ngOnInit(): void {
     this.getDog(); //chamando a função.
   }
-
 }

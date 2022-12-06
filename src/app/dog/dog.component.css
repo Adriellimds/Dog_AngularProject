@@ -1,0 +1,15 @@
+.BoxPai {
+  width: 50rem;
+  height: 50rem;
+  border: 0.2rem;
+}
+.BoxFilha {
+  background-color: black;
+  width: 50rem;
+  height: 30rem;
+}
+img {
+  width: 50rem;
+  height: 30rem;
+  object-fit: contain;
+}

@@ -1,17 +1,17 @@
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { DogComponent } from './dog/dog.component';
-import { Doginterface} from './Dog-interface';
+import { Doginterface } from './Dog-interface';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DogServiceService {
+  private DogsUrl = 'https://dog.ceo/api/breeds/image/random';
 
-  private DogsUrl = '';
+  constructor(private http: HttpClient) {}
 
-  constructor(private http:HttpClient) {}
-
-  return this.http.get<Doginterface[]>(this.)
-
+  ObserDog(): Observable<Doginterface> {
+    return this.http.get<Doginterface>(this.DogsUrl);
+  }
 }
